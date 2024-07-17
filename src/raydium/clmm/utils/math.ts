@@ -681,6 +681,7 @@ export abstract class SwapMath {
         if (step.initialized) {
           let liquidityNet = nextInitTick.liquidityNet;
           if (zeroForOne) liquidityNet = liquidityNet.mul(NEGATIVE_ONE);
+          console.log({liquidityNet});
           state.liquidity = LiquidityMath.addDelta(state.liquidity, liquidityNet);
         }
 
